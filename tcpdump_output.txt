@@ -1,0 +1,162 @@
+							No. Time				Source			Destination		Protocol	Length	Info	
+							
+							406	1666014323.856476	104.18.33.31	10.0.0.5		WebSocket	234		WebSocket Text [FIN] 
+							407	1666014323.856522	10.0.0.5		104.18.33.31 	TCP			54		34338 → 443 [ACK] Seq=888 Ack=7301 Win=64128 Len=0
+							408	1666014323.998441	104.18.33.31	10.0.0.5		WebSocket	250		WebSocket Text [FIN] 
+							409	1666014323.998474	10.0.0.5		104.18.33.31	TCP			54		34348 → 443 [ACK] Seq=887 Ack=9728 Win=64128 Len=0
+							410	1666014324.054603	104.18.33.31	10.0.0.5		WebSocket	256		WebSocket Text [FIN] 
+							411	1666014324.054639	10.0.0.5		104.18.33.31	TCP			54		34348 → 443 [ACK] Seq=887 Ack=9930 Win=64128 Len=0
+							412	1666014324.130528	104.18.33.31	10.0.0.5		WebSocket	250		WebSocket Text [FIN] 
+							413	1666014324.130565	10.0.0.5		104.18.33.31	TCP			54		34348 → 443 [ACK] Seq=887 Ack=10126 Win=64128 Len=0
+							414	1666014324.136966	10.0.0.5		151.36.5.1		SSH			126		Server: Encrypted packet (len=60)
+							415	1666014324.137155	10.0.0.5		151.36.5.1		SSH			118		Server: Encrypted packet (len=52)
+							416	1666014324.137229	10.0.0.5		151.36.5.1		SSH			102		Server: Encrypted packet (len=36)
+							417	1666014324.139765	10.0.0.5		151.36.5.1		SSH			118		Server: Encrypted packet (len=52)
+							418	1666014324.139844	10.0.0.5		151.36.5.1		SSH			102		Server: Encrypted packet (len=36)
+							419	1666014324.183398	10.0.0.5		151.36.5.1		SSH			2722	Server: Encrypted packet (len=2656)
+							420	1666014324.183416	10.0.0.5		151.36.5.1		SSH			1542	Server: Encrypted packet (len=1476)
+							421	1666014324.183440	10.0.0.5		151.36.5.1		SSH			1118	Server: Encrypted packet (len=1052)
+							422	1666014324.211641	10.0.0.5		172.64.154.225	TLSv1.3		345		[TLS segment of a reassembled PDU]
+		
+FIRST POST REQUEST >>>>		423	1666014324.211691	10.0.0.5		172.64.154.225	HTTP		231		POST /api/orders HTTP/1.1 
+
+							424	1666014324.212682	172.64.154.225	10.0.0.5		TCP			60		443 → 53132 [ACK] Seq=496115 Ack=1260 Win=65536 Len=0
+							425	1666014324.212682	172.64.154.225	10.0.0.5		TCP			60		443 → 53132 [ACK] Seq=496115 Ack=1437 Win=65536 Len=0
+							426	1666014324.303434	104.18.33.31	10.0.0.5		WebSocket	247		WebSocket Text [FIN] 
+							427	1666014324.303464	10.0.0.5		104.18.33.31	TCP			54		34348 → 443 [ACK] Seq=887 Ack=10319 Win=64128 Len=0
+							428	1666014324.379748	151.36.5.1		10.0.0.5		TCP			66		61679 → 22 [ACK] Seq=277 Ack=3533 Win=2045 Len=0 TSval=2227645713 TSecr=2951954695
+							429	1666014324.379788	10.0.0.5		151.36.5.1		SSH			366		Server: Encrypted packet (len=300)
+							430	1666014324.389376	151.36.5.1		10.0.0.5		TCP			66		61679 → 22 [ACK] Seq=277 Ack=3621 Win=2046 Len=0 TSval=2227645717 TSecr=2951954698
+							431	1666014324.437287	172.64.154.225	10.0.0.5		TLSv1.3		1018	[TLS segment of a reassembled PDU]
+
+RESPONSE POST REQUEST >>>> 	432	1666014324.437287	172.64.154.225	10.0.0.5		HTTP/JSON	81		HTTP/1.1 200 OK , JavaScript Object Notation (application/json)
+							payload: 
+							{"success":true,"result":{"id":191010644618,"clientId":null,"market":"USDT/USD","type":"market","side":"buy","price":null,"size":3.1,"status":"new","filledSize":0.0,"remainingSize":3.1,"reduceOnly":false,"liquidation":null,"avgFillPrice":null,"postOnly":false,"ioc":true,"createdAt":"2022-10-17T13:45:24.430755+00:00","future":null}}
+							(as you can see, "filledSize" is 0.0. I need to wait for the message of the Websocket connection to the 'fills' channel )
+
+							433	1666014324.437349	10.0.0.5		172.64.154.225	TCP			54		53132 → 443 [ACK] Seq=1437 Ack=497079 Win=743680 Len=0
+							434	1666014324.437361	10.0.0.5		172.64.154.225	TCP			54		53132 → 443 [ACK] Seq=1437 Ack=497106 Win=743680 Len=0
+							435	1666014324.439735	151.36.5.1		10.0.0.5		TCP			66		61679 → 22 [ACK] Seq=277 Ack=4949 Win=2027 Len=0 TSval=2227645770 TSecr=2951954741
+							436	1666014324.439811	151.36.5.1		10.0.0.5		TCP			66		61679 → 22 [ACK] Seq=277 Ack=8805 Win=1987 Len=0 TSval=2227645776 TSecr=2951954741
+							437	1666014324.446384	151.36.5.1		10.0.0.5		TCP			66		[TCP Window Update] 61679 → 22 [ACK] Seq=277 Ack=8805 Win=2048 Len=0 TSval=2227645776 TSecr=2951954741
+							438	1666014324.478413	104.18.33.31	10.0.0.5		WebSocket	251		WebSocket Text [FIN] 
+							439	1666014324.478448	10.0.0.5		104.18.33.31	TCP			54		34348 → 443 [ACK] Seq=887 Ack=10516 Win=64128 Len=0
+							440	1666014324.478472	104.18.33.31	10.0.0.5		WebSocket	261		WebSocket Text [FIN] 
+							441	1666014324.478488	10.0.0.5		104.18.33.31	TCP			54		34296 → 443 [ACK] Seq=884 Ack=3812 Win=64128 Len=0
+							442	1666014324.485823	10.0.0.5		151.36.5.1		SSH			126		Server: Encrypted packet (len=60)
+
+RECEIVED FILL MESSAGE >>>> 	443	1666014324.490288	104.18.33.31	10.0.0.5		WebSocket	452		WebSocket Text [FIN] 
+							payload: 
+							~t{"channel":"fills","type":"update","data":{"id":10426268391,"market":"USDT/USD","future":null,"baseCurrency":"USDT","quoteCurrency":"USD","type":"order","side":"buy","price":1.0,"size":3.1,"orderId":191010644618,"time":"2022-10-17T13:45:24.465499+00:00","tradeId":5164870334,"feeRate":0.000665,"fee":0.0020615,"feeCurrency":"USD","liquidity":"taker","clientOrderId":null}}
+
+							444	1666014324.490325	10.0.0.5		104.18.33.31	TCP			54		34288 → 443 [ACK] Seq=1093 Ack=3982 Win=64128 Len=0
+							445	1666014324.491250	10.0.0.5		151.36.5.1		SSH			158		Server: Encrypted packet (len=92)
+							446	1666014324.491423	10.0.0.5		151.36.5.1		SSH			102		Server: Encrypted packet (len=36)
+							447	1666014324.507735	10.0.0.5		151.36.5.1		SSH			214		Server: Encrypted packet (len=148)
+							448	1666014324.522296	10.0.0.5		151.36.5.1		SSH			142		Server: Encrypted packet (len=76)
+							449	1666014324.522389	10.0.0.5		151.36.5.1		SSH			182		Server: Encrypted packet (len=116)
+							450	1666014324.537856	10.0.0.5		172.64.154.225	TLSv1.3		345		Application Data
+							451	1666014324.537904	10.0.0.5		172.64.154.225	TLSv1.3		232		Application Data
+							452	1666014324.538888	172.64.154.225	10.0.0.5		TCP			60		443 → 53132 [ACK] Seq=497106 Ack=1728 Win=65536 Len=0
+							453	1666014324.538888	172.64.154.225	10.0.0.5		TCP			60		443 → 53132 [ACK] Seq=497106 Ack=1906 Win=65536 Len=0
+							454	1666014324.538939	172.64.154.225	10.0.0.5		TLSv1.3		78		Alert (Level: Fatal, Description: Bad Record MAC)
+							455	1666014324.538947	10.0.0.5		172.64.154.225	TCP			54		53132 → 443 [ACK] Seq=1906 Ack=497130 Win=743680 Len=0
+							456	1666014324.539044	10.0.0.5		172.64.154.225	TLSv1.3		78		Alert (Level: Fatal, Description: Bad Record MAC)
+							457	1666014324.539130	172.64.154.225	10.0.0.5		TCP			60		443 → 53132 [RST, ACK] Seq=497130 Ack=1906 Win=65536 Len=0
+							458	1666014324.540178	172.64.154.225	10.0.0.5		TCP			60		443 → 53132 [RST] Seq=497130 Win=0 Len=0
+							459	1666014324.540178	172.64.154.225	10.0.0.5		TCP			60		443 → 53132 [RST] Seq=497130 Win=0 Len=0
+							460	1666014324.541730	10.0.0.5		104.18.33.31	TCP			74		34358 → 443 [SYN] Seq=0 Win=64240 Len=0 MSS=1460 SACK_PERM TSval=1228819954 TSecr=0 WS=128
+							461	1666014324.543219	104.18.33.31	10.0.0.5		TCP			66		443 → 34358 [SYN, ACK] Seq=0 Ack=1 Win=64240 Len=0 MSS=1400 SACK_PERM WS=8192
+							462	1666014324.543242	10.0.0.5		104.18.33.31	TCP			54		34358 → 443 [ACK] Seq=1 Ack=1 Win=64256 Len=0
+							463	1666014324.551650	10.0.0.5		104.18.33.31	TLSv1.3		571		Client Hello
+							464	1666014324.552669	104.18.33.31	10.0.0.5		TCP			60		443 → 34358 [ACK] Seq=1 Ack=518 Win=65536 Len=0
+							465	1666014324.553702	104.18.33.31	10.0.0.5		TLSv1.3		2652	Server Hello, Change Cipher Spec, Encrypted Extensions, Certificate, Certificate Verify, Finished
+							466	1666014324.553716	10.0.0.5		104.18.33.31	TCP			54		34358 → 443 [ACK] Seq=518 Ack=2599 Win=63744 Len=0
+							467	1666014324.560462	10.0.0.5		104.18.33.31	TLSv1.3		134		Change Cipher Spec, Finished
+							468	1666014324.561327	10.0.0.5		104.18.33.31	TLSv1.3		345		[TLS segment of a reassembled PDU]
+
+SECOND POST REQUEST >>>>	469	1666014324.561411	10.0.0.5		104.18.33.31	HTTP		232		POST /api/orders HTTP/1.1 
+
+							470	1666014324.562336	104.18.33.31	10.0.0.5		TCP			60		443 → 34358 [ACK] Seq=2599 Ack=889 Win=65536 Len=0
+							471	1666014324.603808	104.18.33.31	10.0.0.5		TCP			60		443 → 34358 [ACK] Seq=2599 Ack=1067 Win=65536 Len=0
+							472	1666014324.619383	104.18.33.31	10.0.0.5		WebSocket	249		WebSocket Text [FIN] 
+							473	1666014324.619423	10.0.0.5		104.18.33.31	TCP			54		34348 → 443 [ACK] Seq=887 Ack=10711 Win=64128 Len=0
+							474	1666014324.629242	151.36.5.1		10.0.0.5		TCP			66		61679 → 22 [ACK] Seq=277 Ack=9105 Win=2043 Len=0 TSval=2227645956 TSecr=2951954938
+							475	1666014324.639079	104.18.33.31	10.0.0.5		TLSv1.3		1517	[TLS segment of a reassembled PDU]
+							476	1666014324.639126	10.0.0.5		104.18.33.31	TCP			54		34358 → 443 [ACK] Seq=1067 Ack=4062 Win=64128 Len=0
+
+RESPONSE POST REQUEST >>>> 	477	1666014324.639142	104.18.33.31	10.0.0.5		HTTP/JSON	81		HTTP/1.1 200 OK , JavaScript Object Notation (application/json)
+							payload:
+							{"success":true,"result":{"id":191010645762,"clientId":null,"market":"AMPL/USDT","type":"market","side":"buy","price":null,"size":2.0,"status":"new","filledSize":0.0,"remainingSize":2.0,"reduceOnly":false,"liquidation":null,"avgFillPrice":null,"postOnly":false,"ioc":true,"createdAt":"2022-10-17T13:45:24.633370+00:00","future":null}}
+							(as you can see, "filledSize" is 0.0. I need to wait for the message of the Websocket connection to the 'fills' channel )
+
+							478	1666014324.639149	10.0.0.5		104.18.33.31	TCP			54		34358 → 443 [ACK] Seq=1067 Ack=4089 Win=64128 Len=0
+							479	1666014324.656641	10.0.0.5		104.18.33.31	TCP			54		34358 → 443 [FIN, ACK] Seq=1067 Ack=4089 Win=64128 Len=0
+							480	1666014324.657996	104.18.33.31	10.0.0.5		TCP			60		443 → 34358 [FIN, ACK] Seq=4089 Ack=1068 Win=65536 Len=0
+							481	1666014324.658021	10.0.0.5		104.18.33.31	TCP			54		34358 → 443 [ACK] Seq=1068 Ack=4090 Win=64128 Len=0
+							
+RECEIVED FILL MESSAGE >>>>	482	1666014324.659922	104.18.33.31	10.0.0.5		WebSocket	460		WebSocket Text [FIN] 
+							payload:
+							~|{"channel":"fills","type":"update","data":{"id":10426268441,"market":"AMPL/USDT","future":null,"baseCurrency":"AMPL","quoteCurrency":"USDT","type":"order","side":"buy","price":1.0537,"size":2.0,"orderId":191010645762,"time":"2022-10-17T13:45:24.635092+00:00","tradeId":5164870359,"feeRate":0.000665,"fee":0.001401421,"feeCurrency":"USDT","liquidity":"taker","clientOrderId":null}}
+
+							483	1666014324.659940	10.0.0.5		104.18.33.31	TCP			54		34288 → 443 [ACK] Seq=1093 Ack=4388 Win=64128 Len=0
+							484	1666014324.660781	10.0.0.5		151.36.5.1		SSH			158		Server: Encrypted packet (len=92)
+							485	1666014324.669817	10.0.0.5		151.36.5.1		SSH			214		Server: Encrypted packet (len=148)
+							486	1666014324.673699	104.18.33.31	10.0.0.5		WebSocket	248		WebSocket Text [FIN] 
+							487	1666014324.673727	10.0.0.5		104.18.33.31	TCP			54		34338 → 443 [ACK] Seq=888 Ack=7495 Win=64128 Len=0
+							488	1666014324.679874	10.0.0.5		151.36.5.1		SSH			126		Server: Encrypted packet (len=60)
+							489	1666014324.679895	10.0.0.5		151.36.5.1		SSH			102		Server: Encrypted packet (len=36)
+							490	1666014324.691035	10.0.0.5		151.36.5.1		SSH			142		Server: Encrypted packet (len=76)
+							491	1666014324.691154	10.0.0.5		151.36.5.1		SSH			102		Server: Encrypted packet (len=36)
+							492	1666014324.691280	10.0.0.5		151.36.5.1		SSH			182		Server: Encrypted packet (len=116)
+							493	1666014324.713399	10.0.0.5		104.18.33.31	TCP			74		34360 → 443 [SYN] Seq=0 Win=64240 Len=0 MSS=1460 SACK_PERM TSval=1228820126 TSecr=0 WS=128
+							494	1666014324.714761	104.18.33.31	10.0.0.5		TCP			66		443 → 34360 [SYN, ACK] Seq=0 Ack=1 Win=64240 Len=0 MSS=1400 SACK_PERM WS=8192
+							495	1666014324.714794	10.0.0.5		104.18.33.31	TCP			54		34360 → 443 [ACK] Seq=1 Ack=1 Win=64256 Len=0
+							496	1666014324.729540	10.0.0.5		104.18.33.31	TLSv1.3		571		Client Hello
+							497	1666014324.730587	104.18.33.31	10.0.0.5		TCP			60		443 → 34360 [ACK] Seq=1 Ack=518 Win=65536 Len=0
+							498	1666014324.733329	104.18.33.31	10.0.0.5		TLSv1.3		2653	Server Hello, Change Cipher Spec, Encrypted Extensions, Certificate, Certificate Verify, Finished
+							499	1666014324.733346	10.0.0.5		104.18.33.31	TCP			54		34360 → 443 [ACK] Seq=518 Ack=2600 Win=63744 Len=0
+							500	1666014324.736930	10.0.0.5		104.18.33.31	TLSv1.3		134		Change Cipher Spec, Finished
+							501	1666014324.737902	104.18.33.31	10.0.0.5		TCP			60		443 → 34360 [ACK] Seq=2600 Ack=598 Win=65536 Len=0
+							502	1666014324.738412	10.0.0.5		104.18.33.31	TLSv1.3		345		[TLS segment of a reassembled PDU]
+
+THIRD POST REQUEST >>>>		503	1666014324.738500	10.0.0.5		104.18.33.31	HTTP		232		POST /api/orders HTTP/1.1 
+							504	1666014324.739383	104.18.33.31	10.0.0.5		TCP			60		443 → 34360 [ACK] Seq=2600 Ack=889 Win=65536 Len=0
+							505	1666014324.739532	104.18.33.31	10.0.0.5		TCP			60		443 → 34360 [ACK] Seq=2600 Ack=1067 Win=65536 Len=0
+							506	1666014324.739663	151.36.5.1		10.0.0.5		TCP			66		61679 → 22 [ACK] Seq=277 Ack=9165 Win=2047 Len=0 TSval=2227646062 TSecr=2951955044
+							507	1666014324.739663	151.36.5.1		10.0.0.5		TCP			66		61679 → 22 [ACK] Seq=277 Ack=9293 Win=2048 Len=0 TSval=2227646069 TSecr=2951955049
+							508	1666014324.759450	151.36.5.1		10.0.0.5		TCP			66		61679 → 22 [ACK] Seq=277 Ack=9441 Win=2048 Len=0 TSval=2227646084 TSecr=2951955065
+							509	1666014324.791921	104.18.33.31	10.0.0.5		TLSv1.3		1517	[TLS segment of a reassembled PDU]
+							510	1666014324.791960	10.0.0.5		104.18.33.31	TCP			54		34360 → 443 [ACK] Seq=1067 Ack=4063 Win=64128 Len=0
+RESPONSE POST REQUEST >>>> 	511	1666014324.791992	104.18.33.31	10.0.0.5		HTTP/JSON	81		HTTP/1.1 200 OK , JavaScript Object Notation (application/json)
+							payload:
+							{"success":true,"result":{"id":191010646367,"clientId":null,"market":"AMPL/USD","type":"market","side":"sell","price":null,"size":2.0,"status":"new","filledSize":0.0,"remainingSize":2.0,"reduceOnly":false,"liquidation":null,"avgFillPrice":null,"postOnly":false,"ioc":true,"createdAt":"2022-10-17T13:45:24.786507+00:00","future":null}}
+							(as you can see, "filledSize" is 0.0. I need to wait for the message of the Websocket connection to the 'fills' channel )
+
+							512	1666014324.792004	10.0.0.5		104.18.33.31	TCP			54		34360 → 443 [ACK] Seq=1067 Ack=4090 Win=64128 Len=0
+							513	1666014324.796573	151.36.5.1		10.0.0.5		TCP			66		61679 → 22 [ACK] Seq=277 Ack=9633 Win=2048 Len=0 TSval=2227646122 TSecr=2951955080
+							514	1666014324.802743	10.0.0.5		104.18.33.31	TCP			54		34360 → 443 [FIN, ACK] Seq=1067 Ack=4090 Win=64128 Len=0
+							515	1666014324.803992	104.18.33.31	10.0.0.5		WebSocket	233		WebSocket Text [FIN] 
+							516	1666014324.804013	10.0.0.5		104.18.33.31	TCP			54		34330 → 443 [ACK] Seq=887 Ack=7204 Win=64128 Len=0
+							517	1666014324.804032	104.18.33.31	10.0.0.5		TCP			60		443 → 34360 [FIN, ACK] Seq=4090 Ack=1068 Win=65536 Len=0
+							518	1666014324.804046	10.0.0.5		104.18.33.31	TCP			54		34360 → 443 [ACK] Seq=1068 Ack=4091 Win=64128 Len=0
+							519	1666014324.812153	104.18.33.31	10.0.0.5		WebSocket	265		WebSocket Text [FIN] 
+							520	1666014324.812178	10.0.0.5		104.18.33.31	TCP			54		34316 → 443 [ACK] Seq=884 Ack=3815 Win=64128 Len=0
+RECEIVED FILL MESSAGE >>>>	521	1666014324.815532	104.18.33.31	10.0.0.5		WebSocket	458		WebSocket Text [FIN] 
+							payload:
+							~z{"channel":"fills","type":"update","data":{"id":10426268493,"market":"AMPL/USD","future":null,"baseCurrency":"AMPL","quoteCurrency":"USD","type":"order","side":"sell","price":1.0505,"size":2.0,"orderId":191010646367,"time":"2022-10-17T13:45:24.788126+00:00","tradeId":5164870385,"feeRate":0.000665,"fee":0.001397165,"feeCurrency":"USD","liquidity":"taker","clientOrderId":null}}
+
+							522	1666014324.815550	10.0.0.5		104.18.33.31	TCP			54		34288 → 443 [ACK] Seq=1093 Ack=4792 Win=64128 Len=0
+							523	1666014324.816557	10.0.0.5		151.36.5.1		SSH			158		Server: Encrypted packet (len=92)
+							524	1666014324.832233	10.0.0.5		151.36.5.1		SSH			318		Server: Encrypted packet (len=252)
+							525	1666014324.834534	10.0.0.5		151.36.5.1		SSH			310		Server: Encrypted packet (len=244)
+							526	1666014324.838811	10.0.0.5		168.63.129.16	DNS			89		Standard query 0x3fd1 A graph.facebook.com OPT
+							527	1666014324.838922	10.0.0.5		168.63.129.16	DNS			89		Standard query 0xd55a AAAA graph.facebook.com OPT
+							528	1666014324.841854	168.63.129.16	10.0.0.5		DNS			141		Standard query response 0xd55a AAAA graph.facebook.com CNAME star.c10r.facebook.com AAAA 2a03:2880:f05a:12:face:b00c:0:2 OPT
+							529	1666014324.864803	104.18.33.31	10.0.0.5		WebSocket	234		WebSocket Text [FIN] 
+							530	1666014324.864844	10.0.0.5		104.18.33.31	TCP			54		34338 → 443 [ACK] Seq=888 Ack=7675 Win=64128 Len=0
+							531	1666014324.887448	168.63.129.16	10.0.0.5		DNS			129		Standard query response 0x3fd1 A graph.facebook.com CNAME star.c10r.facebook.com A 31.13.77.17 OPT
+							532	1666014324.887992	10.0.0.5		31.13.77.17		TCP			74		42428 → 443 [SYN] Seq=0 Win=64240 Len=0 MSS=1460 SACK_PERM TSval=2971166205 TSecr=0 WS=128
+							533	1666014324.909351	151.36.5.1		10.0.0.5		TCP			66		61679 → 22 [ACK] Seq=277 Ack=9725 Win=2048 Len=0 TSval=2227646241 TSecr=2951955219
+							534	1666014324.912052	104.18.33.31	10.0.0.5		WebSocket	247		WebSocket Text [FIN] 
+							535	1666014324.912075	10.0.0.5		104.18.33.31	TCP			54		34330 → 443 [ACK] Seq=887 Ack=7397 Win=64128 Len=0
